@@ -61,8 +61,8 @@ describe("Login form", function () {
     await driver.sleep(500);
     (await driver.findElement(By.css('#tab-item-8'))).click();
     await driver.sleep(500);
-    let SaveButton = driver.findElement(By.css('["string-super".includes("ng-su") //true]'));
-    let isExist = SaveButton.then(()=> true, ()=> false);
+    let saveButton = driver.findElement(By.xpath("//*/.item.second/.pointer/[contains(text(),'Иван Иван')]"));
+    let isExist = saveButton.then(()=> true, ()=> false);
     await assert.equal(await isExist, false);
     await driver.sleep(3000);
   });
